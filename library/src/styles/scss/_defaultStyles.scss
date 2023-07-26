@@ -30,6 +30,7 @@ body {
   font-size: 20px;
   font-weight: 400;
   line-height: 1.2;
+  scroll-behavior: smooth;
 }
 input,
 button,
@@ -73,8 +74,8 @@ p {
   overflow-wrap: break-word;
 }
 
-.container {
+.container_main {
   max-width: 1440px;
-  padding: 20px 20px;
+  padding: 20px 20px 40px;
   margin: 0 auto;
 }

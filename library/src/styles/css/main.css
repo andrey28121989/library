@@ -35,6 +35,7 @@ body {
   font-size: 20px;
   font-weight: 400;
   line-height: 1.2;
+  scroll-behavior: smooth;
 }
 
 input,
@@ -88,15 +89,21 @@ p {
   overflow-wrap: break-word;
 }
 
-.container {
+.container_main {
   max-width: 1440px;
-  padding: 20px 20px;
+  padding: 20px 20px 40px;
   margin: 0 auto;
 }
 
 .header {
   background: rgb(12, 12, 14);
   color: white;
+}
+
+.container_header {
+  max-width: 1440px;
+  padding: 20px 20px;
+  margin: 0 auto;
 }
 
 .header__right {
@@ -171,4 +178,77 @@ p {
   text-align: center;
   padding: 35px 40px;
   text-transform: uppercase;
+}
+
+.about__header {
+  font-family: "Forum";
+  font-size: 40px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  text-align: center;
+  margin: 0px;
+  color: #0C0C0E;
+  margin-bottom: 20px;
+}
+
+.about__line {
+  border-top: 1px solid #0C0C0E;
+  width: 50px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.about__text {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.img__left {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.about__buttons {
+  display: flex;
+  justify-content: center;
+  height: 26px;
+}
+
+.about__buttons:hover {
+  cursor: pointer;
+}
+
+.button_left {
+  margin: 5px;
+}
+
+.about__button_left {
+  border-radius: 100%;
+  background: #BB945F;
+  padding: 8px;
+}
+
+.button_center {
+  margin: 5px;
+}
+
+.about__button_center {
+  border-radius: 100px;
+  background: #0C0C0E;
+  padding: 8px;
+}
+
+.button_right {
+  margin: 5px;
+}
+
+.about__button_right {
+  border-radius: 100px;
+  background: #0C0C0E;
+  padding: 8px;
 }
