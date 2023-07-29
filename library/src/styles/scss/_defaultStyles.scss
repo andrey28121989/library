@@ -78,4 +78,22 @@ p {
   max-width: 1440px;
   padding: 20px 20px 40px;
   margin: 0 auto;
+  background: white;
+  width: 100%;
+}
+
+.wrapper {
+  background: gray;
+}
+
+@font-face {
+  font-family:'Forum-Regular';
+  src: url(../../../assets/fonts/Forum-Regular.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'Inter-Regular';
+  src: url(../../../assets/fonts/Inter-Regular.ttf);
+  font-style: normal;
 }
