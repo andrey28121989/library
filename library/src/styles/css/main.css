@@ -1,0 +1,254 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+header,
+footer,
+nav,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  scroll-behavior: smooth;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+}
+
+p {
+  width: auto;
+  overflow-wrap: break-word;
+}
+
+.container_main {
+  max-width: 1440px;
+  padding: 20px 20px 40px;
+  margin: 0 auto;
+}
+
+.header {
+  background: rgb(12, 12, 14);
+  color: white;
+}
+
+.container_header {
+  max-width: 1440px;
+  padding: 20px 20px;
+  margin: 0 auto;
+}
+
+.header__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__list {
+  display: flex;
+  gap: 30px;
+}
+
+.logo__title h1 {
+  font-family: "Forum";
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0.02em;
+  transition: all 0.5s;
+  text-transform: capitalize;
+}
+
+.logo__title h1:hover {
+  color: #BB945F;
+  transition: all 0.5s;
+}
+
+.menu__link {
+  transition: all 0.5s;
+}
+
+.menu__link:hover {
+  color: #BB945F;
+  transition: all 0.5s;
+  text-decoration: underline;
+}
+
+.icon:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+
+.welcome {
+  display: flex;
+  height: 600px;
+  background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.1) 100%) top/auto 50% no-repeat, url(../../../assets/fonts/Welcome.png) center/cover no-repeat;
+}
+
+.welcome__text {
+  color: white;
+  height: 220px;
+  width: 600px;
+  background-color: rgb(12, 12, 14);
+  margin-top: 220px;
+}
+
+.text {
+  font-family: "Forum";
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 3px;
+  text-align: center;
+  padding: 35px 40px;
+  text-transform: uppercase;
+}
+
+.about__header {
+  font-family: "Forum";
+  font-size: 40px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  text-align: center;
+  margin: 0px;
+  color: #0C0C0E;
+  margin-bottom: 20px;
+}
+
+.about__line {
+  border-top: 1px solid #0C0C0E;
+  width: 50px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.about__text {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.img__left {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.about__buttons {
+  display: flex;
+  justify-content: center;
+  height: 26px;
+}
+
+.about__buttons:hover {
+  cursor: pointer;
+}
+
+.button_left {
+  margin: 5px;
+}
+
+.about__button_left {
+  border-radius: 100%;
+  background: #BB945F;
+  padding: 8px;
+}
+
+.button_center {
+  margin: 5px;
+}
+
+.about__button_center {
+  border-radius: 100px;
+  background: #0C0C0E;
+  padding: 8px;
+}
+
+.button_right {
+  margin: 5px;
+}
+
+.about__button_right {
+  border-radius: 100px;
+  background: #0C0C0E;
+  padding: 8px;
+}
