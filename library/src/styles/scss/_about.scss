@@ -1,11 +1,5 @@
-// .about__wrapper {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// }
-
 .about__header {
-  font-family: "Forum";
+  font-family: 'Forum-regular';
   font-size: 40px;
   font-weight: 400;
   font-style: normal;
@@ -13,8 +7,6 @@
   letter-spacing: 2px;
   text-transform: capitalize;
   text-align: center;
-
-  margin: 0px;
 
   color: #0C0C0E;
   margin-bottom: 20px;
@@ -35,6 +27,7 @@
 .img__left {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 25px;
   margin-bottom: 35px;
 }
@@ -45,37 +38,37 @@
   height: 26px;
 }
 
-.about__buttons:hover {
+.button_left:hover {
   cursor: pointer;
-}
-
-.button_left {
-  margin: 5px;
 }
 
 .about__button_left {
   border-radius: 100%;
   background: #BB945F;
   padding: 8px;
+  margin: 5px;
 }
 
-.button_center {
-  margin: 5px;
+.button_center:hover {
+  cursor: pointer;
 }
 
 .about__button_center {
   border-radius: 100px;
   background: #0C0C0E;
   padding: 8px;
+  margin: 5px;
 }
 
-.button_right {
-  margin: 5px;
+
+.button_right:hover {
+  cursor: pointer;
 }
 
 .about__button_right {
   border-radius: 100px;
   background: #0C0C0E;
   padding: 8px;
+  margin: 5px;
 }
 

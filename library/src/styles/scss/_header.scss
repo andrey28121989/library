@@ -1,5 +1,4 @@
 .header {
-  background: rgba(12, 12, 14, 1);
   color: white;
 }
 
@@ -7,6 +6,7 @@
   max-width: 1440px;
   padding: 20px 20px;
   margin: 0 auto;
+  background: rgba(12, 12, 14, 1);
 }
 
 .header__right {
@@ -28,7 +28,7 @@
 }
 
 .logo__title h1{
-  font-family: "Forum";
+  font-family: 'Forum-regular';
   font-size: 30px;
   font-weight: 400;
   line-height: 50px;
