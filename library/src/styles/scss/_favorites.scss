@@ -36,6 +36,8 @@
 .season__tabs_label {
   display: flex;
   align-items: center;
+  padding: 5px;
+  margin: -5px;
 }
 
 .season__tabs_input {
@@ -80,6 +82,9 @@
 }
 
 .season__items_book {
+  display: flex;
+  flex-flow: column nowrap;
+
   position: relative;
   border: 1px solid #000;
   width: 550px;
@@ -128,7 +133,9 @@
   letter-spacing: 2px;
   text-transform: capitalize;
 
-  margin-bottom: 15px;
+  flex-grow: 1;
+
+  max-width: 357px
 }
 
 .season__itema_btn {
@@ -136,7 +143,8 @@
   border-radius: 2px;
   background: none;
   background-color: white;
-  padding: 9px 27px;
+  padding: 8px 25px;
+  max-width: 75px;
 
   font-family: 'Inter';
   font-size: 10px;
@@ -146,7 +154,7 @@
   text-align: center;
 
   transition: background-color .5s linear;
-  margin-bottom: 15px;
+
 }
 
 .season__itema_btn:hover {
@@ -154,4 +162,10 @@
   border: 1px solid #BB945F;
 }
 
+.season__itema_btn:disabled {
+  background-color: white;
+  border: 1px solid #BB945F;
+  color: #BB945F;
+  cursor: default;
+}
 
