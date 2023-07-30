@@ -311,6 +311,8 @@ p {
 .season__tabs_label {
   display: flex;
   align-items: center;
+  padding: 5px;
+  margin: -5px;
 }
 
 .season__tabs_input {
@@ -353,6 +355,8 @@ p {
 }
 
 .season__items_book {
+  display: flex;
+  flex-flow: column nowrap;
   position: relative;
   border: 1px solid #000;
   width: 550px;
@@ -397,7 +401,8 @@ p {
   line-height: 40px;
   letter-spacing: 2px;
   text-transform: capitalize;
-  margin-bottom: 15px;
+  flex-grow: 1;
+  max-width: 357px;
 }
 
 .season__itema_btn {
@@ -405,7 +410,8 @@ p {
   border-radius: 2px;
   background: none;
   background-color: white;
-  padding: 9px 27px;
+  padding: 8px 25px;
+  max-width: 75px;
   font-family: "Inter";
   font-size: 10px;
   font-weight: 700;
@@ -413,10 +419,99 @@ p {
   letter-spacing: 1px;
   text-align: center;
   transition: background-color 0.5s linear;
-  margin-bottom: 15px;
 }
 
 .season__itema_btn:hover {
   background-color: #BB945F;
   border: 1px solid #BB945F;
+}
+
+.season__itema_btn:disabled {
+  background-color: white;
+  border: 1px solid #BB945F;
+  color: #BB945F;
+  cursor: default;
+}
+
+.coffee__shop_header {
+  font-family: "Forum-regular";
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  text-align: center;
+  color: #0C0C0E;
+  margin-bottom: 20px;
+}
+
+.coffee__shop_line {
+  border-top: 1px solid #0C0C0E;
+  width: 50px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.coffee__shop_text {
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.coffee__shop_prices {
+  display: flex;
+  justify-content: space-between;
+}
+
+.coffee__shop_prices-coffee {
+  text-align: justify;
+  width: 438px;
+}
+
+.coffee__shop_prices-deserts {
+  text-align: right;
+  width: 482px;
+}
+
+.coffee__shop_prices-title {
+  font-family: "Forum-regular";
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  color: #BB945F;
+}
+
+.coffee__shop_prices-item {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.coffee__shop_prices-name {
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  width: 212px;
+}
+
+.coffee__shop_prices-line {
+  border-top: 1px solid #BB945F;
+  width: 100px;
+  margin: 0 60px 0 60px;
+}
+
+.coffee__shop-price {
+  font-family: "Forum-regular";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
 }
