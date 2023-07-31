@@ -60,6 +60,12 @@
   margin: 5px;
 }
 
+.about__button_center:hover,
+.about__button_center:active {
+  background:#BB945F;
+  transition: all 0.5s;
+}
+
 
 .button_right:hover {
   cursor: pointer;
@@ -70,5 +76,11 @@
   background: #0C0C0E;
   padding: 8px;
   margin: 5px;
+}
+
+.about__button_right:hover,
+.about__button_right:active {
+  background:#BB945F;
+  transition: all 0.5s;
 }
 
