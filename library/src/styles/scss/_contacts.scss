@@ -1,0 +1,83 @@
+.contacts__header {
+  font-family: 'Forum-regular';
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  text-align: center;
+
+  color: #0C0C0E;
+  margin-bottom: 20px;
+}
+
+.contacts__line {
+  border-top: 1px solid #0C0C0E;
+  width: 50px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.contacts__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contacts__map img {
+  max-width: 100%;
+}
+
+.contacts__info_title {
+  font-family: 'Inter';
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+.contacts__info_phone {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.contacts__info_phone p {
+  font-family: 'Inter';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+.contacts__info_email {
+  margin-top: 40px;
+}
+
+.staff {
+  margin-bottom: 20px;
+}
+
+.contacts__director_email {
+  font-family: 'Inter';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+.contacts__director_email span {
+  font-weight: 700;
+}
+
+.contacts__director_email span:hover {
+  color:#BB945F;
+  transition: all 0.5s;
+}
+
+.contacts__number:hover {
+  color:#BB945F;
+  transition: all 0.5s;
+}
