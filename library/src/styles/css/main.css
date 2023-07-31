@@ -611,3 +611,154 @@ p {
   color: #BB945F;
   transition: all 0.5s;
 }
+
+.cards__header {
+  font-family: "Forum-regular";
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  text-align: center;
+  color: #0C0C0E;
+  margin-bottom: 20px;
+}
+
+.cards__line {
+  border-top: 1px solid #0C0C0E;
+  width: 50px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.cards__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards__form_title {
+  font-family: "Inter";
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 30px;
+  border: 3px solid #BB945F;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 600px;
+}
+
+.form__bg {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px 20px 25px;
+  background-color: #BB945F;
+  margin-bottom: 20px;
+}
+
+.form__title {
+  font-family: "Forum-regular";
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0.02em;
+}
+
+.form__input {
+  font-family: "Forum-regular";
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0.02em;
+  border-radius: 10px;
+  border: none;
+  width: 520px;
+  height: 66px;
+  padding: 16px;
+  display: block;
+}
+
+.form__button {
+  border: 1px solid #0C0C0E;
+  border-radius: 2px;
+  background: none;
+  background-color: white;
+  width: 242px;
+  height: 44px;
+  padding: 10px 35px;
+  margin: 0 auto;
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 1px;
+  text-align: center;
+  transition: background-color 0.5s linear;
+}
+
+.form__button:hover {
+  background-color: #BB945F;
+  border: 1px solid #BB945F;
+}
+
+.cards__get {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.cards__get_title {
+  font-family: "Forum-regular";
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 33px;
+  letter-spacing: 0.02em;
+  text-align: right;
+}
+
+.cards__get_text {
+  max-width: 457px;
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  text-align: right;
+}
+
+.cards__get_buttons {
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+}
+
+.get__btn {
+  border: 1px solid #0C0C0E;
+  border-radius: 2px;
+  background: none;
+  background-color: white;
+  height: 30px;
+  padding: 8px 0;
+  width: 75px;
+  font-family: "Inter";
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 1px;
+  text-align: center;
+  transition: background-color 0.5s linear;
+}
+
+.get__btn:hover {
+  background-color: #BB945F;
+  border: 1px solid #BB945F;
+  cursor: pointer;
+}
