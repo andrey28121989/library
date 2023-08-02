@@ -202,6 +202,14 @@ p {
   text-transform: uppercase;
 }
 
+.container_about {
+  max-width: 1440px;
+  padding: 20px 20px 35px;
+  margin: 0 auto;
+  background: white;
+  width: 100%;
+}
+
 .about__header {
   font-family: "Forum-regular";
   font-size: 40px;
@@ -219,11 +227,11 @@ p {
   border-top: 1px solid #0C0C0E;
   width: 50px;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 49px;
 }
 
 .about__text {
-  margin-bottom: 20px;
+  margin-bottom: 28px;
   text-align: center;
 }
 
@@ -643,13 +651,13 @@ p {
   line-height: 36px;
   letter-spacing: 0.02em;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  padding: 20px 20px 30px;
+  padding: 20px 18px 30px 17px;
   border: 3px solid #BB945F;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   width: 600px;
@@ -659,7 +667,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 15px 20px 25px;
+  padding: 18px 19px 21px 19px;
   background-color: #BB945F;
   margin-bottom: 20px;
 }
@@ -682,8 +690,9 @@ p {
   border: none;
   width: 520px;
   height: 66px;
-  padding: 16px;
+  padding: 20px;
   display: block;
+  margin-bottom: 5px;
 }
 
 .form__button {
@@ -775,7 +784,7 @@ p {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #FFFFFF;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .footer__contacts {
@@ -840,7 +849,7 @@ p {
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 2px;
-  margin-left: 20px;
+  margin-left: 128px;
   margin-top: 10px;
   transition: all 0.5s;
 }
@@ -862,4 +871,12 @@ p {
 .git:hover {
   color: #BB945F;
   transition: all 0.5s;
+}
+
+.footer__inst {
+  margin-left: 2px;
+}
+
+.footer__facebook {
+  margin-left: 7px;
 }
