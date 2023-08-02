@@ -1,0 +1,102 @@
+.container_footer {
+  max-width: 1440px;
+  padding: 20px 20px 44px;
+  margin: 0 auto;
+  background: rgba(12, 12, 14, 1);
+  color: white;
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #FFFFFF;
+  padding-bottom: 30px;
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__contacts_item:hover {
+  transform: scale(1.8);
+  transition: all 0.5s;
+}
+
+.footer__address {
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+
+  width: 229px;
+  margin-bottom: 20px;
+  transition: all 0.5s;
+}
+
+.footer__address:hover {
+  color: #BB945F;
+  transition: all 0.5s;
+}
+
+.footer__contacts_list {
+  display: flex;
+  gap: 16px;
+}
+
+.time {
+  font-family: 'Inter';
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: right;
+
+  margin-bottom: 10px;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 34px;
+}
+
+.year {
+  font-family: 'Inter';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
+
+.rsschool {
+  font-family: 'Inter';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 2px;
+  margin-left: 20px;
+  margin-top: 10px;
+  transition: all 0.5s;
+}
+
+.rsschool:hover {
+  color: #BB945F;
+  transition: all 0.5s;
+}
+
+.git {
+  font-family: 'Inter';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  transition: all 0.5s;
+}
+
+.git:hover {
+  color: #BB945F;
+  transition: all 0.5s;
+}
