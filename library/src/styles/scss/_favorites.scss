@@ -171,3 +171,8 @@
   cursor: default;
 }
 
+@media screen and (max-width: 1024px) {
+  .season__items {
+    justify-content: center;
+  }
+}
