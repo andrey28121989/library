@@ -53,7 +53,7 @@
 }
 
 .season__tabs_input:checked ~ .season__tabs_title {
-  font-weight: 700;
+  text-shadow: 1.25px 0 0 currentColor;
   transition: all 0.3s;
 }
 
@@ -71,7 +71,6 @@
 .season__tabs_label:hover,
 .season__tabs_input:hover {
   cursor: pointer;
-  color: #BB945F;
   transition: all 0.3s;
 }
 
