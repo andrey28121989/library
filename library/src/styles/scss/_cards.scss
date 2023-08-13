@@ -21,6 +21,7 @@
 .cards__wrapper {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .cards__form_title {
@@ -155,4 +156,21 @@
 .get__btn:hover {
   background-color: #BB945F;
   border: 1px solid #BB945F;
+}
+
+@media screen and (max-width: 1024px) {
+  .cards__wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 21px;
+  }
+
+  .cards__get {
+    align-items: center;
+  }
+
+  .cards__get_text {
+    text-align: center;
+    max-width: 534px;
+  }
 }

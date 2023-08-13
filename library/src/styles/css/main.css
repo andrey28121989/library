@@ -171,6 +171,76 @@ p {
   transition: all 0.5s;
 }
 
+.burger {
+  display: none;
+}
+
+.line {
+  height: 2px;
+  width: 45px;
+  background: white;
+  transition: 0.3s all linear;
+  position: absolute;
+  top: 8px;
+}
+
+.line:nth-child(2) {
+  top: -2px;
+}
+
+.line:nth-child(3) {
+  top: 18px;
+}
+
+@media screen and (max-width: 1024px) {
+  .burger {
+    display: block;
+    position: relative;
+    width: 45px;
+    height: 20px;
+    cursor: pointer;
+    transition: 0.5s all linear;
+  }
+  .burger.active {
+    transition: 0.5s all linear;
+  }
+  .burger.active .line_first {
+    display: none;
+  }
+  .burger.active .line_second {
+    transform: rotate(45deg);
+    top: 10px;
+    right: 6px;
+  }
+  .burger.active .line_third {
+    transform: rotate(-45deg);
+    top: 10px;
+    right: 6px;
+  }
+  .menu {
+    position: absolute;
+    top: 90px;
+    right: -100%;
+    transition: all 0.5s;
+  }
+  .menu.active {
+    top: 90px;
+    right: 13px;
+    height: 480px;
+    width: 332px;
+    background: rgb(12, 12, 14);
+    transition: all 0.3s;
+    text-align: center;
+    overflow: visible;
+    display: block;
+    position: absolute;
+  }
+  .menu__list {
+    flex-direction: column;
+    padding: 23px;
+    gap: 56px;
+  }
+}
 .welcome {
   max-width: 1440px;
   margin: 0 auto;
@@ -178,12 +248,14 @@ p {
 }
 
 .container_welcome {
-  display: flex;
-  height: 600px;
-  background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.1) 100%) top/auto 50% no-repeat, url(../../../assets/fonts/Welcome.png) center/cover no-repeat;
+  position: relative;
+  min-height: 600px;
+  width: 100%;
+  background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.1) 100%) top/auto 50% no-repeat, url(../../../assets/fonts/Welcome.jpg) center/cover no-repeat;
 }
 
 .welcome__text {
+  position: absolute;
   color: white;
   height: 220px;
   width: 600px;
@@ -237,10 +309,11 @@ p {
 
 .img__left {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   gap: 25px;
   margin-bottom: 35px;
+  overflow: hidden;
 }
 
 .about__buttons {
@@ -249,51 +322,55 @@ p {
   height: 26px;
 }
 
-.button_left:hover {
+.about__buttons_slider:hover {
   cursor: pointer;
 }
 
-.about__button_left {
-  border-radius: 100%;
-  background: #BB945F;
-  padding: 8px;
-  margin: 5px;
-}
-
-.button_center:hover {
-  cursor: pointer;
-}
-
-.about__button_center {
+.about__button {
   border-radius: 100px;
   background: #0C0C0E;
   padding: 8px;
   margin: 5px;
 }
 
-.about__button_center:hover,
-.about__button_center:active {
+.about__button_active {
+  background: #BB945F;
+}
+
+.about__button:hover,
+.about__button:active {
   background: #BB945F;
   transition: all 0.5s;
 }
 
-.button_right:hover {
-  cursor: pointer;
+@media screen and (max-width: 1439px) {
+  .img__left {
+    width: 925px;
+  }
+  .slider__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 58px;
+  }
+  .slifer__arrow_left {
+    background-image: url("../../../assets/icons/Carret_Left.svg");
+    transition: all 0.5s;
+    width: 24px;
+    height: 24px;
+  }
+  .slifer__arrow_right {
+    background-image: url("../../../assets/icons/Carret_Right.svg");
+    transition: all 0.5s;
+    width: 24px;
+    height: 24px;
+  }
 }
-
-.about__button_right {
-  border-radius: 100px;
-  background: #0C0C0E;
-  padding: 8px;
-  margin: 5px;
+@media screen and (max-width: 1024px) {
+  .img__left {
+    width: 450px;
+  }
 }
-
-.about__button_right:hover,
-.about__button_right:active {
-  background: #BB945F;
-  transition: all 0.5s;
-}
-
 .favorites__header {
   font-family: "Forum-regular";
   font-size: 40px;
@@ -455,6 +532,11 @@ p {
   cursor: default;
 }
 
+@media screen and (max-width: 1024px) {
+  .season__items {
+    justify-content: center;
+  }
+}
 .coffee__shop_header {
   font-family: "Forum-regular";
   font-size: 40px;
@@ -487,16 +569,15 @@ p {
 .coffee__shop_prices {
   display: flex;
   justify-content: space-between;
+  flex-flow: row nowrap;
 }
 
 .coffee__shop_prices-coffee {
-  text-align: justify;
   width: 438px;
 }
 
 .coffee__shop_prices-deserts {
   text-align: right;
-  width: 482px;
 }
 
 .coffee__shop_prices-title {
@@ -538,6 +619,15 @@ p {
   letter-spacing: 2px;
 }
 
+@media screen and (max-width: 1024px) {
+  .coffee__shop_text {
+    width: 730px;
+  }
+  .coffee__shop_prices {
+    flex-flow: column nowrap;
+    row-gap: 40px;
+  }
+}
 .contacts__header {
   font-family: "Forum-regular";
   font-size: 40px;
@@ -620,6 +710,11 @@ p {
   transition: all 0.5s;
 }
 
+@media screen and (max-width: 1024px) {
+  .contacts__wrapper {
+    gap: 100px;
+  }
+}
 .cards__header {
   font-family: "Forum-regular";
   font-size: 40px;
@@ -642,6 +737,7 @@ p {
 .cards__wrapper {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .cards__form_title {
@@ -771,6 +867,20 @@ p {
   border: 1px solid #BB945F;
 }
 
+@media screen and (max-width: 1024px) {
+  .cards__wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 21px;
+  }
+  .cards__get {
+    align-items: center;
+  }
+  .cards__get_text {
+    text-align: center;
+    max-width: 534px;
+  }
+}
 .container_footer {
   max-width: 1440px;
   padding: 20px 20px 44px;

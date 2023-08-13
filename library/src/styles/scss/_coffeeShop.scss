@@ -31,16 +31,15 @@
 .coffee__shop_prices {
   display: flex;
   justify-content: space-between;
+  flex-flow: row nowrap;
 }
 
 .coffee__shop_prices-coffee {
-  text-align: justify;
   width: 438px;
 }
 
 .coffee__shop_prices-deserts {
   text-align: right;
-  width: 482px;
 }
 
 .coffee__shop_prices-title {
@@ -82,3 +81,13 @@
   letter-spacing: 2px;
 }
 
+@media screen and (max-width: 1024px) {
+  .coffee__shop_text{
+    width: 730px;
+  }  
+
+  .coffee__shop_prices {
+    flex-flow: column nowrap;
+    row-gap: 40px;
+  }
+}

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="src/styles/css/main.css">
   <link rel="icon" type="img/icon" href="assets/icons/BPL.png">
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;700&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <title>Library</title>
 </head>
 <body>
@@ -21,18 +21,13 @@
               </div>
             </a>
           </div>
-          <div class="burger">
-            <div class="line line_first"></div>
-            <div class="line line_second"></div>
-            <div class="line line_third"></div>
-          </div>
           <div class="header__right">
-            <nav class="menu">
+            <nav class="menu _lock">
               <ul class="menu__list">
                 <li class="menu__item">
                   <a href="#about" class="menu__link">About</a>
                 </li>
-                <li class="menu__item">
+                <li class="menu__item"> 
                   <a href="#favorites" class="menu__link">Favorites</a>
                 </li>
                 <li class="menu__item">
@@ -48,6 +43,11 @@
             </nav>
             <div class="icon">
               <img src="assets/icons/Subtract.svg" alt="icon_profile" width="28" height="28">
+            </div>
+            <div class="burger">
+              <span class="line line_first"></span>
+              <span class="line line_second"></span>
+              <span class="line line_third"></span>
             </div>
           </div>
         </div>
@@ -69,22 +69,32 @@
             <p class="about__text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside</p>
             <div class="about__img_container">
               <div class="slider__wrapper">
+                <div class="slifer__arrow_left" id="arrow_left"></div>
                 <div class="img__left">
                   <img class="about_img" src="assets/images/image1.png" alt="image1">
                   <img class="about_img" src="assets/images/image2.png" alt="image2">
                   <img class="about_img" src="assets/images/image3.png" alt="image3">
+                  <img class="about_img" src="assets/images/image4.png" alt="image4">
+                  <img class="about_img" src="assets/images/image5.png" alt="image5">
                 </div>
+                <div class="slifer__arrow_right" id="arrow_rigth"></div>
               </div>
             </div>
             <div class="about__buttons">
-              <div class="button_left">
-                <div class="about__button_left"></div>
+              <div class="about__buttons_slider">
+                <div class="about__button about__button_active"></div>
               </div>
-              <div class="button_center">
-                <div class="about__button_center"></div>
+              <div class="about__buttons_slider">
+                <div class="about__button"></div>
               </div>
-              <div class="button_right">
-                <div class="about__button_right"></div>
+              <div class="about__buttons_slider">
+                <div class="about__button"></div>
+              </div>
+              <div class="about__buttons_slider">
+                <div class="about__button"></div>
+              </div>
+              <div class="about__buttons_slider">
+                <div class="about__button"></div>
               </div>
             </div>
           </div>
@@ -146,11 +156,8 @@
               <button class="season__itema_btn" disabled>Own</button>
               <img class="season__items_img" src="assets/images/book4.png" alt="book4">
             </div>
-
           </div>
-
         </div>
-
       </section>
       <section class="coffee__shop" id="coffee_shop">
         <div class="container_main">
