@@ -110,10 +110,17 @@
   }
 
   .menu {
-    position: absolute;
     top: 90px;
-    right: -100%;
-    transition: all .5s;
+    right: 0px;
+    height: 480px;
+    width: 332px;
+    background: rgb(12, 12, 14);
+    transition: all 0.5s;
+    text-align: center;
+    overflow: visible;
+    display: block;
+    position: absolute;
+    z-index: auto;
   }
 
   .menu.active {
@@ -122,11 +129,12 @@
     height: 480px;
     width: 332px;
     background: rgb(12, 12, 14);
-    transition: all 0.3s;
+    transition: all 0.5s;
     text-align: center;
     overflow: visible;
     display: block;
     position: absolute;
+    z-index: 1;
   }
 
   .menu__list {
