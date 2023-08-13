@@ -218,10 +218,17 @@ p {
     right: 6px;
   }
   .menu {
-    position: absolute;
     top: 90px;
-    right: -100%;
+    right: 0px;
+    height: 480px;
+    width: 332px;
+    background: rgb(12, 12, 14);
     transition: all 0.5s;
+    text-align: center;
+    overflow: visible;
+    display: block;
+    position: absolute;
+    z-index: auto;
   }
   .menu.active {
     top: 90px;
@@ -229,11 +236,12 @@ p {
     height: 480px;
     width: 332px;
     background: rgb(12, 12, 14);
-    transition: all 0.3s;
+    transition: all 0.5s;
     text-align: center;
     overflow: visible;
     display: block;
     position: absolute;
+    z-index: 1;
   }
   .menu__list {
     flex-direction: column;
@@ -423,7 +431,7 @@ p {
 }
 
 .season__tabs_input:checked ~ .season__tabs_title {
-  font-weight: 700;
+  text-shadow: 1.25px 0 0 currentColor;
   transition: all 0.3s;
 }
 
@@ -441,7 +449,6 @@ p {
 .season__tabs_label:hover,
 .season__tabs_input:hover {
   cursor: pointer;
-  color: #BB945F;
   transition: all 0.3s;
 }
 
