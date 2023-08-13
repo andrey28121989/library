@@ -81,3 +81,9 @@
   color:#BB945F;
   transition: all 0.5s;
 }
+
+@media screen and (max-width: 1024px) {
+  .contacts__wrapper {
+    gap: 100px;
+  }
+}

@@ -5,12 +5,14 @@
 }
 
 .container_welcome {
-  display: flex;
-  height: 600px;
-  background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.10) 100%) top / auto 50% no-repeat, url(../../../assets/fonts/Welcome.png) center / cover no-repeat;
+  position: relative;
+  min-height: 600px;
+  width: 100%;
+  background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.10) 100%) top / auto 50% no-repeat, url(../../../assets/fonts/Welcome.jpg) center / cover no-repeat;
 }
 
 .welcome__text {
+  position: absolute;
   color:white;
   height: 220px;
   width: 600px;

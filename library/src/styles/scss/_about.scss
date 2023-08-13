@@ -34,10 +34,11 @@
 
 .img__left {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   gap: 25px;
   margin-bottom: 35px;
+  overflow: hidden;
 }
 
 .about__buttons {
@@ -46,49 +47,58 @@
   height: 26px;
 }
 
-.button_left:hover {
+.about__buttons_slider:hover {
   cursor: pointer;
 }
 
-.about__button_left {
-  border-radius: 100%;
+.about__button {
+  border-radius: 100px;
+  background: #0C0C0E;
+  padding: 8px;
+  margin: 5px;
+}
+
+.about__button_active {
   background: #BB945F;
-  padding: 8px;
-  margin: 5px;
 }
 
-.button_center:hover {
-  cursor: pointer;
-}
-
-.about__button_center {
-  border-radius: 100px;
-  background: #0C0C0E;
-  padding: 8px;
-  margin: 5px;
-}
-
-.about__button_center:hover,
-.about__button_center:active {
+.about__button:hover,
+.about__button:active {
   background:#BB945F;
   transition: all 0.5s;
 }
 
+@media screen and (max-width: 1439px) {
+  .img__left {
+    width: 925px;
+  }
 
-.button_right:hover {
-  cursor: pointer;
+  .slider__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 58px;
+  }
+
+  .slifer__arrow_left {
+    background-image: url("../../../assets/icons/Carret_Left.svg");
+    transition: all 0.5s;
+    width: 24px;
+    height: 24px;
+  }
+
+  .slifer__arrow_right {
+    background-image: url("../../../assets/icons/Carret_Right.svg");
+    transition: all 0.5s;
+    width: 24px;
+    height: 24px;
+  }
 }
 
-.about__button_right {
-  border-radius: 100px;
-  background: #0C0C0E;
-  padding: 8px;
-  margin: 5px;
+@media screen and (max-width: 1024px) {
+  .img__left {
+    width: 450px;
+  }
 }
 
-.about__button_right:hover,
-.about__button_right:active {
-  background:#BB945F;
-  transition: all 0.5s;
-}
 
