@@ -99,13 +99,11 @@
     .line_second {
       transform: rotate(45deg);
       top: 10px;
-      right: 6px;
     }
   
     .line_third {
       transform: rotate(-45deg);
       top: 10px;
-      right: 6px;
     }
   }
 
@@ -115,26 +113,20 @@
     height: 480px;
     width: 332px;
     background: rgb(12, 12, 14);
-    transition: all 0.5s;
+    transition: visibility 0.5s, opacity 0.5s linear;
     text-align: center;
-    overflow: visible;
     display: block;
     position: absolute;
     z-index: auto;
+    visibility: hidden;
+    opacity: 0;
   }
 
   .menu.active {
-    top: 90px;
-    right: 13px;
-    height: 480px;
-    width: 332px;
-    background: rgb(12, 12, 14);
-    transition: all 0.5s;
-    text-align: center;
-    overflow: visible;
-    display: block;
-    position: absolute;
     z-index: 1;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0.5s, opacity 0.5s linear;
   }
 
   .menu__list {

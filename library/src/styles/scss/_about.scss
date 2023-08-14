@@ -30,6 +30,7 @@
 .about__text {
   margin-bottom: 28px;
   text-align: center;
+  line-height: 40px;
 }
 
 .img__left {
@@ -98,6 +99,14 @@
 @media screen and (max-width: 1024px) {
   .img__left {
     width: 450px;
+    margin-bottom: 20px;
+  }
+
+  .about__line {
+    margin-bottom: 40px;
+  }
+  .about__text {
+    margin-bottom: 20px;
   }
 }
 
