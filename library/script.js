@@ -5,28 +5,30 @@ console.log("Ваша оценка - 50 баллов. Отзыв по пункт
 document.addEventListener('DOMContentLoaded', ()=> {
   const burger = document.querySelector('.burger');
   const navigation = document.querySelector('.menu');
-  const body = document.querySelector('body');
-  // const menuLinkHelp = document.querySelector('.menu__link_help');
-  // const menuLinkContacts = document.querySelector('.menu__link_contacts');
+  const menuLink = document.querySelectorAll('.menu__link');
+  const menuLinkOverlay = document.querySelector('.header__overlay');
+  const menuLinkWelcome = document.querySelector('.container_welcome');
 
   burger.addEventListener('click', ()=> {
       navigation.classList.toggle('active');
       burger.classList.toggle('active');
-      body.classList.toggle('_lock');
-      // darkTheme.classList.toggle('_change')
   })  
 
-  menuLinkHelp.addEventListener('click', ()=> {
-      body.classList.remove('_lock');
-      navigation.classList.remove('active');
-      burger.classList.remove('active');
-      // darkTheme.classList.remove('_change')
-  })
-
-  menuLinkContacts.addEventListener('click', ()=> {
-    // body.classList.remove('_lock');
+  menuLinkOverlay.addEventListener('click', ()=> {
     navigation.classList.remove('active');
     burger.classList.remove('active');
-    // darkTheme.classList.remove('_change');
+  })
+
+  menuLinkWelcome.addEventListener('click', ()=> {
+    navigation.classList.remove('active');
+    burger.classList.remove('active');
+  })
+
+
+  menuLink.forEach(e => {
+    e.addEventListener('click', () => {
+      navigation.classList.remove('active');
+      burger.classList.remove('active');
+    })
   })
 });

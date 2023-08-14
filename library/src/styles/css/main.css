@@ -192,6 +192,15 @@ p {
   top: 18px;
 }
 
+.header__overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 2000px;
+}
+
 @media screen and (max-width: 1024px) {
   .burger {
     display: block;
@@ -221,24 +230,23 @@ p {
     height: 480px;
     width: 332px;
     background: rgb(12, 12, 14);
-    transition: visibility 0.5s, opacity 0.5s linear;
     text-align: center;
-    display: block;
-    position: absolute;
-    z-index: auto;
-    visibility: hidden;
-    opacity: 0;
+    position: fixed;
+    z-index: 1;
+    transform: translateX(100%);
+    transition: 0.5s all linear;
   }
   .menu.active {
-    z-index: 1;
-    visibility: visible;
-    opacity: 1;
-    transition: visibility 0.5s, opacity 0.5s linear;
+    transform: translateX(0);
+    transition: 0.5s all linear;
   }
   .menu__list {
     flex-direction: column;
     padding: 23px;
     gap: 56px;
+  }
+  .header__overlay {
+    display: block;
   }
 }
 .welcome {
