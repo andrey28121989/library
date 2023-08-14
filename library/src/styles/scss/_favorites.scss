@@ -29,6 +29,7 @@
 
 .season__tabs {
   display: flex;
+  flex-wrap: wrap;
   gap: 90px;
   margin-bottom: 40px;
 }
@@ -175,3 +176,11 @@
     justify-content: center;
   }
 }
+
+@media (max-width: 1220px) {
+  .season__items {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+

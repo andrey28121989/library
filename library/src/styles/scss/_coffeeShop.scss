@@ -83,11 +83,17 @@
 
 @media screen and (max-width: 1024px) {
   .coffee__shop_text{
-    width: 730px;
+    width: 732px;
   }  
 
   .coffee__shop_prices {
     flex-flow: column nowrap;
     row-gap: 40px;
   }
+}
+
+@media screen and (max-width: 767px) {
+  .coffee__shop_text{
+    width: 100%;
+  } 
 }
