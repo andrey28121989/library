@@ -177,10 +177,16 @@
   }
 }
 
-@media (max-width: 1220px) {
+@media screen and (max-width: 1220px) {
   .season__items {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .season__tabs {
+    gap: 55px;
   }
 }
 
