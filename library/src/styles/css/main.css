@@ -553,10 +553,15 @@ p {
     justify-content: center;
   }
 }
-@media (max-width: 1220px) {
+@media screen and (max-width: 1220px) {
   .season__items {
     flex-direction: column;
     align-items: center;
+  }
+}
+@media screen and (max-width: 736px) {
+  .season__tabs {
+    gap: 55px;
   }
 }
 .coffee__shop_header {
@@ -643,16 +648,12 @@ p {
 
 @media screen and (max-width: 1024px) {
   .coffee__shop_text {
-    width: 732px;
+    width: 100%;
+    letter-spacing: 1.94px;
   }
   .coffee__shop_prices {
     flex-flow: column nowrap;
     row-gap: 40px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .coffee__shop_text {
-    width: 100%;
   }
 }
 .contacts__header {
@@ -737,12 +738,19 @@ p {
   transition: all 0.5s;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1240px) {
   .contacts__wrapper {
+    flex-direction: column;
+    align-items: center;
     gap: 100px;
   }
-  .contacts__map img {
-    margin-left: 15px;
+  .contacts__info {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 770px) {
+  .contacts__info {
+    align-self: flex-start;
   }
 }
 .cards__header {
@@ -897,7 +905,7 @@ p {
   border: 1px solid #BB945F;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
   .cards__wrapper {
     flex-direction: column;
     align-items: center;
@@ -1024,4 +1032,7 @@ p {
   .rsschool {
     margin-left: 73px;
   }
+}
+.rsschool {
+  margin-left: 0;
 }
