@@ -32,3 +32,88 @@ document.addEventListener('DOMContentLoaded', ()=> {
     })
   })
 });
+
+//------ограниченная карусель------//
+
+const sliderElement = document.querySelectorAll(".about_img");
+const imgSlider = document.querySelector(".img__slider");
+const scrollRight = document.querySelector(".slider__arrow_right");
+const scrollLeft = document.querySelector(".slider__arrow_left");
+const paginationBtns = document.querySelectorAll(".about__button");
+
+let currentSlide = 0;
+let sliderWidth;
+
+function init() {
+    sliderWidth = document.querySelector(".about_img_slider").offsetWidth;
+    imgSlider.style.width = sliderWidth * sliderElement.length + 'px';
+    sliderElement.forEach(item => {
+        item.style.width = sliderWidth + 'px';
+    });
+    rollSlider();
+}
+
+init();
+window.addEventListener('resize', init);
+
+scrollRight.addEventListener('click', function () {
+  currentSlide++;
+    if (currentSlide >= sliderElement.length) {
+      currentSlide = 0;
+    }
+  rollSlider();
+  updateSlider();
+})
+
+scrollLeft.addEventListener('click', function () {
+  currentSlide--;
+    if (currentSlide < 0) {
+      currentSlide = sliderElement.length - 1;
+    }
+  rollSlider();
+  updateSlider();
+})
+
+function rollSlider() {
+  imgSlider.style.transform = 'translateX(-' + currentSlide * sliderWidth + 'px)';
+}
+
+updateSlider();
+
+paginationBtns.forEach((button, index) => {
+	button.addEventListener("click", () => {
+		currentSlide = index;
+
+		updateSlider();
+    rollSlider();
+	});
+});
+
+function updateSlider() {
+  paginationBtns.forEach((button, index) => {
+		button.classList.remove("about__button_active");
+
+		if (index === currentSlide) {
+			button.classList.add("about__button_active");
+		}
+	})
+
+  if (currentSlide === 0) {
+    scrollLeft.style = 'display: none;'
+	} else {
+		scrollLeft.style = 'display: inline-block;'
+	}
+	if (currentSlide === sliderElement.length - 1) {
+    scrollRight.style = 'display: none;'
+	} else {
+    scrollRight.style = 'display: inline-block;'
+	}
+}
+
+
+
+
+
+
+	
+
