@@ -30,7 +30,7 @@
 .season__tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 90px;
+  column-gap: 88px;
   margin-bottom: 40px;
 }
 
@@ -92,8 +92,34 @@
   width: 550px;
   height: 555px;
   padding: 15px 0 15px 20px;
-
+  transition: all 2s;
 }
+
+.books_winter,
+.books_spring,
+.books_summer,
+.books_autumn {
+  display: none;
+  transition: all 2s;
+}
+
+.season__tabs:has(#winter:checked) ~ .season__items > .books_winter,
+.season__tabs:has(#spring:checked) ~ .season__items > .books_spring,
+.season__tabs:has(#summer:checked) ~ .season__items > .books_summer,
+.season__tabs:has(#autumn:checked) ~ .season__items > .books_autumn {
+  display: block;
+  animation: show 2s;
+  transition: all 2s;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+};
 
 .season__items_img {
   position: absolute;
@@ -174,6 +200,14 @@
 @media screen and (max-width: 1024px) {
   .season__items {
     justify-content: center;
+  }
+
+  .season__tabs {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 20px;
+    z-index: 5;
   }
 }
 
