@@ -43,8 +43,27 @@
               </ul>
             </nav>
             <div class="icon">
-              <img src="assets/icons/Subtract.svg" alt="icon_profile" width="28" height="28">
+              <img class="icon__img" src="assets/icons/Subtract.svg" alt="icon_profile" width="28" height="28">
+              <div class="profile active">
+                <h3 class="profile__title">Profile</h3>
+                <div class="profile__line"></div>
+                <button class="profile__button profile__log-in">Log In</button>
+                <button class="profile__button profile__register">Register</button>
+              </div>
             </div>
+            <form class="login active">
+              <img class="login__img" src="assets/icons/close_btn.svg" alt="close_btn">
+              <h3 class="login__title">Login</h3>
+              <label class="login__label" for="email">E-mail or readers card</label>
+              <input class="login__input" id="email" name="email" type="text" required>
+              <label class="login__label" for="password">Password</label>
+              <input class="login__input" id="password" name="password" type="password" required>
+              <button class="login__button">Log In</button>
+              <p class="register">
+                Don’t have an account?
+                <span class="register__span">Register</span>
+              </p>
+            </form>
             <div class="burger">
               <span class="line line_first"></span>
               <span class="line line_second"></span>

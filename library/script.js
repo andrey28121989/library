@@ -110,9 +110,47 @@ function updateSlider() {
 	}
 }
 
+//--------модальное окно Profile--------//
 
+const iconImg = document.querySelector('.icon__img');
+const profile = document.querySelector('.profile');
+const burger = document.querySelector('.burger');
+const navigation = document.querySelector('.menu');
 
+iconImg.addEventListener('click', () => {
+  profile.classList.toggle('active');
+  burger.classList.remove('active');
+  navigation.classList.remove('active');
+})
 
+document.addEventListener('click', () => {
+  if(!e.target.classList.contains('profile') && !e.target.classList.contains('icon__img')){
+    profile.classList.remove('active');
+  }
+})
+
+//--------модальное окно Log In--------//
+
+const profileLogin = document.querySelector('.profile__log-in');
+const login = document.querySelector('.login');
+const overlay = document.querySelector('.header__overlay');
+const loginImg = document.querySelector('.login__img');
+
+profileLogin.addEventListener('click', () => {
+  login.classList.toggle('active');
+  profile.classList.remove('active');
+  overlay.classList.toggle('active');
+})
+
+overlay.addEventListener('click', () => {
+  login.classList.remove('active');
+  overlay.classList.remove('active');
+})
+
+loginImg.addEventListener('click', () => {
+  login.classList.remove('active');
+  overlay.classList.remove('active');
+})
 
 
 	
