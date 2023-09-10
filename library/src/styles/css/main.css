@@ -140,6 +140,58 @@ p {
   gap: 30px;
 }
 
+.icon {
+  position: relative;
+}
+
+.profile {
+  position: absolute;
+  width: 80px;
+  height: 115px;
+  text-align: center;
+  display: block;
+  background-color: white;
+  z-index: 5;
+  top: 28px;
+  right: 0;
+  transform: scale(0);
+  transition: all 0.3s;
+}
+
+.profile.active {
+  transform: scale(1);
+}
+
+.profile__title {
+  color: #000;
+  font-family: "Inter";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  margin: 5px 0;
+}
+
+.profile__line {
+  width: 40px;
+  height: 1px;
+  background: #BB945F;
+  margin-left: 20px;
+}
+
+.profile__button {
+  color: #000;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 10px;
+  transition: 0.3s;
+  background-color: white;
+}
+
 .logo__title h1 {
   font-family: "Forum-regular";
   font-size: 30px;
@@ -165,7 +217,7 @@ p {
   text-decoration: underline;
 }
 
-.icon:hover {
+.icon__img:hover {
   cursor: pointer;
   opacity: 0.5;
   transition: all 0.5s;
@@ -198,7 +250,114 @@ p {
   top: 0;
   right: 0;
   width: 100%;
-  height: 2000px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+}
+
+.header__overlay.active {
+  display: block;
+}
+
+.login {
+  padding: 20px 25px;
+  position: fixed;
+  left: 42%;
+  top: 30%;
+  width: 250px;
+  height: 262px;
+  display: block;
+  background-color: #fff;
+  transform: scale(0);
+  z-index: 11;
+  transition: all 0.6s;
+}
+
+.login.active {
+  transform: scale(1);
+}
+
+.login__img {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.login__title {
+  margin-bottom: 17px;
+  color: #000;
+  text-align: center;
+  font-family: "Forum";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.login__label {
+  color: #000;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+}
+
+.login__input {
+  margin: 8px 0;
+  border: 1px solid #BB945F;
+  width: 200px;
+  height: 20px;
+}
+
+.login__button {
+  color: #0C0C0E;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  margin-top: 13px;
+  width: 75px;
+  height: 30px;
+  border-radius: 2px;
+  border: 1px solid #0c0c0e;
+  background-color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.register {
+  color: #000;
+  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+  font-family: "Inter";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 10px;
+}
+
+.register__span {
+  color: #0C0C0E;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-decoration-line: underline;
+  margin-left: 8px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1024px) {
@@ -245,8 +404,11 @@ p {
     padding: 23px;
     gap: 56px;
   }
-  .header__overlay {
-    display: block;
+}
+@media screen and (max-width: 768px) {
+  .login {
+    top: 30%;
+    left: 34%;
   }
 }
 .welcome {
@@ -316,13 +478,19 @@ p {
   line-height: 40px;
 }
 
-.img__left {
+.img__slider {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
   gap: 25px;
   margin-bottom: 35px;
-  overflow: hidden;
+  transition: all ease 1s;
+  overflow-x: hidden;
+  width: 2440px;
+  position: relative;
+}
+
+.img__slider_element {
+  text-align: center;
 }
 
 .about__buttons {
@@ -352,32 +520,61 @@ p {
   transition: all 0.5s;
 }
 
+.about__button_hidden {
+  display: none;
+}
+
+.about_img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.slider__wrapper {
+  overflow-x: hidden;
+}
+
 @media screen and (max-width: 1439px) {
-  .img__left {
-    width: 925px;
+  .about__wrapper {
+    position: relative;
   }
-  .slider__wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 58px;
-  }
-  .slifer__arrow_left {
+  .slider__arrow_left {
+    display: inline-block;
+    position: absolute;
     background-image: url("../../../assets/icons/Carret_Left.svg");
     transition: all 0.5s;
     width: 24px;
     height: 24px;
+    top: 59.5%;
+    left: 9%;
   }
-  .slifer__arrow_right {
+  .slider__arrow_right {
+    display: inline-block;
+    position: absolute;
     background-image: url("../../../assets/icons/Carret_Right.svg");
     transition: all 0.5s;
     width: 24px;
     height: 24px;
+    top: 59.5%;
+    right: 9%;
+  }
+  .slider__arrow_left:disabled,
+  .slider__arrow_right:disabled {
+    opacity: 0.5;
+  }
+  .about__button_hidden {
+    display: block;
   }
 }
 @media screen and (max-width: 1024px) {
-  .img__left {
+  .slider__wrapper {
+    max-width: 450px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .img__slider {
     width: 450px;
+    height: 100%;
     margin-bottom: 20px;
   }
   .about__line {
@@ -385,6 +582,14 @@ p {
   }
   .about__text {
     margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .img__slider {
+    width: 450px;
+    height: 100%;
+    margin-bottom: 20px;
+    gap: 0;
   }
 }
 .favorites__header {
@@ -418,7 +623,7 @@ p {
 .season__tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 90px;
+  column-gap: 88px;
   margin-bottom: 40px;
 }
 
@@ -477,8 +682,34 @@ p {
   width: 550px;
   height: 555px;
   padding: 15px 0 15px 20px;
+  transition: all 2s;
 }
 
+.books_winter,
+.books_spring,
+.books_summer,
+.books_autumn {
+  display: none;
+  transition: all 2s;
+}
+
+.season__tabs:has(#winter:checked) ~ .season__items > .books_winter,
+.season__tabs:has(#spring:checked) ~ .season__items > .books_spring,
+.season__tabs:has(#summer:checked) ~ .season__items > .books_summer,
+.season__tabs:has(#autumn:checked) ~ .season__items > .books_autumn {
+  display: block;
+  animation: show 2s;
+  transition: all 2s;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .season__items_img {
   position: absolute;
   bottom: -1px;
@@ -551,6 +782,13 @@ p {
 @media screen and (max-width: 1024px) {
   .season__items {
     justify-content: center;
+  }
+  .season__tabs {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 20px;
+    z-index: 5;
   }
 }
 @media screen and (max-width: 1220px) {
