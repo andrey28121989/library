@@ -135,10 +135,16 @@ const profileLogin = document.querySelector('.profile__log-in');
 const login = document.querySelector('.login');
 const overlay = document.querySelector('.header__overlay');
 const loginImg = document.querySelector('.login__img');
+const getBtnLogin = document.querySelector('.get__btn_login');
 
 profileLogin.addEventListener('click', () => {
   login.classList.toggle('active');
   profile.classList.remove('active');
+  overlay.classList.toggle('active');
+})
+
+getBtnLogin.addEventListener('click', () => {
+  login.classList.toggle('active');
   overlay.classList.toggle('active');
 })
 
