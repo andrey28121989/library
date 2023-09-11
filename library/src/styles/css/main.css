@@ -151,7 +151,7 @@ p {
   text-align: center;
   display: block;
   background-color: white;
-  z-index: 8;
+  z-index: 5;
   top: 28px;
   right: 0;
   transform: scale(0);
@@ -252,7 +252,7 @@ p {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1;
+  z-index: 2;
 }
 
 .header__overlay.active {
@@ -335,7 +335,13 @@ p {
   cursor: pointer;
 }
 
-.register {
+.login__button:hover {
+  border: 1px solid #bb945f;
+  background-color: #bb945f;
+  transition: all 0.3s;
+}
+
+.login__register {
   color: #000;
   text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
   font-family: "Inter";
@@ -346,7 +352,7 @@ p {
   margin-top: 10px;
 }
 
-.register__span {
+.login__register_span {
   color: #0C0C0E;
   text-align: center;
   font-family: "Inter";
@@ -357,6 +363,32 @@ p {
   letter-spacing: 1px;
   text-decoration-line: underline;
   margin-left: 8px;
+  cursor: pointer;
+}
+
+.register {
+  padding: 20px 25px;
+  position: fixed;
+  left: 42%;
+  top: 30%;
+  width: 250px;
+  height: 382px;
+  display: block;
+  background-color: #fff;
+  transform: scale(0);
+  z-index: 3;
+  transition: all 0.6s;
+}
+
+.register.active {
+  transform: scale(1);
+}
+
+.register__img {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  transition: all 0.3s;
   cursor: pointer;
 }
 
@@ -399,7 +431,7 @@ p {
   .menu.active {
     transform: translateX(0);
     transition: 0.5s all linear;
-    z-index: 8;
+    z-index: 5;
   }
   .menu__list {
     flex-direction: column;
@@ -410,6 +442,10 @@ p {
 @media screen and (max-width: 768px) {
   .login {
     top: 30%;
+    left: 34%;
+  }
+  .register {
+    top: 20%;
     left: 34%;
   }
 }
@@ -753,7 +789,7 @@ p {
   max-width: 357px;
 }
 
-.season__itema_btn {
+.season__items_btn {
   border: 1px solid #0C0C0E;
   border-radius: 2px;
   background: none;
@@ -769,7 +805,7 @@ p {
   transition: background-color 0.5s linear;
 }
 
-.season__itema_btn:hover {
+.season__items_btn:hover {
   background-color: #BB945F;
   border: 1px solid #BB945F;
 }
@@ -790,7 +826,7 @@ p {
     top: 0;
     background: white;
     padding: 20px;
-    z-index: 5;
+    z-index: 1;
   }
 }
 @media screen and (max-width: 1220px) {

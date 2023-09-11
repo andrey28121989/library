@@ -166,7 +166,7 @@
   max-width: 357px
 }
 
-.season__itema_btn {
+.season__items_btn {
   border: 1px solid #0C0C0E;
   border-radius: 2px;
   background: none;
@@ -185,7 +185,7 @@
 
 }
 
-.season__itema_btn:hover {
+.season__items_btn:hover {
   background-color: #BB945F;
   border: 1px solid #BB945F;
 }
@@ -207,7 +207,7 @@
     top: 0;
     background: white;
     padding: 20px;
-    z-index: 5;
+    z-index: 1;
   }
 }
 
