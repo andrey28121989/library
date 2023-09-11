@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
     burger.classList.toggle('active');
     profile.classList.remove('active');
     login.classList.remove('active');
+    register.classList.remove('active');
   })  
 
   menuLinkOverlay.addEventListener('click', ()=> {
@@ -132,17 +133,44 @@ overlay.addEventListener('click', () => {
   overlay.classList.remove('active');
 })
 
+//--------модальное окно Register--------//
+
+const register = document.querySelector('.register');
+const profileRegister = document.querySelector('.profile__register');
+const registerImg = document.querySelector('.register__img');
+const getBtnSing = document.querySelector('.get__btn_sing');
+
+profileRegister.addEventListener('click', () => {
+  register.classList.toggle('active');
+  profile.classList.remove('active');
+})
+
+getBtnSing.addEventListener('click', () => {
+  register.classList.toggle('active');
+  overlay.classList.toggle('active');
+})
+
+overlay.addEventListener('click', () => {
+  register.classList.remove('active');
+  overlay.classList.remove('active');
+})
+
+registerImg.addEventListener('click', () => {
+  register.classList.remove('active');
+  overlay.classList.remove('active');
+})
+
 //--------модальное окно Log In--------//
 
 const profileLogin = document.querySelector('.profile__log-in');
 const login = document.querySelector('.login');
 const loginImg = document.querySelector('.login__img');
 const getBtnLogin = document.querySelector('.get__btn_login');
+const seasonItemsBtn = document.querySelectorAll('.season__items_btn');
 
 profileLogin.addEventListener('click', () => {
   login.classList.toggle('active');
   profile.classList.remove('active');
-  // overlay.classList.toggle('active');
 })
 
 getBtnLogin.addEventListener('click', () => {
@@ -150,15 +178,25 @@ getBtnLogin.addEventListener('click', () => {
   overlay.classList.toggle('active');
 })
 
+seasonItemsBtn.forEach(e => {
+    e.addEventListener('click', () => {
+    login.classList.toggle('active');
+    overlay.classList.toggle('active');
+  })
+})
+
 overlay.addEventListener('click', () => {
   login.classList.remove('active');
   overlay.classList.remove('active');
 })
 
+
 loginImg.addEventListener('click', () => {
   login.classList.remove('active');
   overlay.classList.remove('active');
 })
+
+
 
 
 	
