@@ -10,8 +10,10 @@ document.addEventListener('DOMContentLoaded', ()=> {
   const menuLinkWelcome = document.querySelector('.container_welcome');
 
   burger.addEventListener('click', ()=> {
-      navigation.classList.toggle('active');
-      burger.classList.toggle('active');
+    navigation.classList.toggle('active');
+    burger.classList.toggle('active');
+    profile.classList.remove('active');
+    login.classList.remove('active');
   })  
 
   menuLinkOverlay.addEventListener('click', ()=> {
@@ -116,31 +118,31 @@ const iconImg = document.querySelector('.icon__img');
 const profile = document.querySelector('.profile');
 const burger = document.querySelector('.burger');
 const navigation = document.querySelector('.menu');
+const overlay = document.querySelector('.header__overlay');
 
 iconImg.addEventListener('click', () => {
   profile.classList.toggle('active');
   burger.classList.remove('active');
   navigation.classList.remove('active');
+  overlay.classList.toggle('active');
 })
 
-document.addEventListener('click', () => {
-  if(!e.target.classList.contains('profile') && !e.target.classList.contains('icon__img')){
-    profile.classList.remove('active');
-  }
+overlay.addEventListener('click', () => {
+  profile.classList.remove('active');
+  overlay.classList.remove('active');
 })
 
 //--------модальное окно Log In--------//
 
 const profileLogin = document.querySelector('.profile__log-in');
 const login = document.querySelector('.login');
-const overlay = document.querySelector('.header__overlay');
 const loginImg = document.querySelector('.login__img');
 const getBtnLogin = document.querySelector('.get__btn_login');
 
 profileLogin.addEventListener('click', () => {
   login.classList.toggle('active');
   profile.classList.remove('active');
-  overlay.classList.toggle('active');
+  // overlay.classList.toggle('active');
 })
 
 getBtnLogin.addEventListener('click', () => {
